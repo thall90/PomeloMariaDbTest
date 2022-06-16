@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using PomeloMariaDbTest.Api.Constants;
 using PomeloMariaDbTest.Data.Context.Interfaces;
@@ -28,21 +27,13 @@ public static class EntityFrameworkContextRegistrationExtensions
         this IServiceCollection services,
         IConfiguration configuration,
         string connectionStringName,
-        string? schemaName = null,
-        bool allowMissingConnectionString = false,
         ServiceLifetime serviceLifetime = ServiceLifetime.Scoped)
         where TContext : DbContext, TInterface, IDbContext
     {
         var connectionString = configuration.GetConnectionString(connectionStringName);
 
-        if (allowMissingConnectionString && string.IsNullOrWhiteSpace(connectionString))
-        {
-            return;
-        }
-
         services.AddDbContext<TInterface, TContext>((_, options) =>
         {
-            options.ConfigureWarnings(x => x.Ignore(CoreEventId.ManyServiceProvidersCreatedWarning));
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), x =>
             {
                 x.MigrationsAssembly(AssemblyConstants.MigrationsAssembly);
@@ -50,14 +41,7 @@ public static class EntityFrameworkContextRegistrationExtensions
                 {
                     return $"{schema.ToLowerInvariant() ?? "dbo"}_{entity.ToLower()}";
                 });
-
-                if (!string.IsNullOrWhiteSpace(schemaName))
-                {
-                    x.MigrationsHistoryTable($"__{schemaName}MigrationsHistory");
-                }
             });
-
-            options.EnableSensitiveDataLogging();
         }, serviceLifetime);
     }
 }
