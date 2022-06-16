@@ -1,6 +1,6 @@
 # PomeloMariaDbTest
 
-Proof-of-concept for MariaDb code-first migrations in .NET 6 Web API using Pomelo EF Provider.
+Proof-of-concept for MariaDb code-first migrations in .NET 6 Web API using the [Pomelo EF Provider](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql).
 
 ### How To Run This Project
 
