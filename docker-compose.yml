@@ -1,0 +1,11 @@
+services:
+  some-mariadb:
+    image: mariadb:10.7
+    container_name: mariadb2
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=Password123!
+      - MYSQL_PASSWORD=Password123!
+      - MYSQL_USER=admin
+      - MYSQL_DATABASE=master
