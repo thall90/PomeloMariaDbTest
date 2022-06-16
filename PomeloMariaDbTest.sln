@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomeloMariaDbTest.Api", "PomeloMariaDbTest.Api\PomeloMariaDbTest.Api.csproj", "{A5CC30E7-6DD7-47ED-9DFE-6E19FC656770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomeloMariaDbTest.Data", "PomeloMariaDbTest.Data\PomeloMariaDbTest.Data.csproj", "{E7D15F9B-FE30-406A-88E1-3EAA9C43704F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomeloMariaDbTest.Data.Migrations", "PomeloMariaDbTest.Data.Migrations\PomeloMariaDbTest.Data.Migrations.csproj", "{E934E349-85D5-4BA8-9F41-718C0F8F4D21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5CC30E7-6DD7-47ED-9DFE-6E19FC656770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CC30E7-6DD7-47ED-9DFE-6E19FC656770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CC30E7-6DD7-47ED-9DFE-6E19FC656770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CC30E7-6DD7-47ED-9DFE-6E19FC656770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7D15F9B-FE30-406A-88E1-3EAA9C43704F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7D15F9B-FE30-406A-88E1-3EAA9C43704F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7D15F9B-FE30-406A-88E1-3EAA9C43704F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7D15F9B-FE30-406A-88E1-3EAA9C43704F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E934E349-85D5-4BA8-9F41-718C0F8F4D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E934E349-85D5-4BA8-9F41-718C0F8F4D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E934E349-85D5-4BA8-9F41-718C0F8F4D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E934E349-85D5-4BA8-9F41-718C0F8F4D21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
